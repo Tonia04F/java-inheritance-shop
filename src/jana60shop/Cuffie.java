@@ -41,8 +41,12 @@ public class Cuffie extends Prodotto{
 
 
 	public String toString() {
-		return super.toString() + " " + colore + " " + wireless;
-
+		String toString = super.toString() + " " + colore;
+		if(wireless) {
+			toString += " le cuffie sono wireless";
+		}else {
+			toString += " le cuffie non sono wireless";
+		}
+		return toString;
 	}
-	
 }

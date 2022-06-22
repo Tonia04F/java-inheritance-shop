@@ -74,14 +74,13 @@ metodi di “utilità” per fare in modo che:
 	}
 	
 	//metodo iva
-	public double calcoloPrezzoIva(double prezzo, int iva) {
+	public double calcoloPrezzoIva() {
 		double prezzoFinale = prezzo -(prezzo * iva % 100);
-		System.out.println("Il prezzo del prodotto: " + df.format(prezzoFinale));
 	return prezzoFinale;
 		
 	}
 	public String toString() {
-		return codice + " " + nome + " " + marca + " " + prezzoFinale;
+		return codice + " " + nome + " " + marca + " " + calcoloPrezzoIva();
 	}
 	
 	

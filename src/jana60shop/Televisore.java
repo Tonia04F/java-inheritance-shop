@@ -14,7 +14,8 @@ public class Televisore extends Prodotto{
 	}
 	
 	
-	
+
+
 	public int getDimensioni() {
 		return dimensioni;
 	}
@@ -40,8 +41,13 @@ public class Televisore extends Prodotto{
 
 
 	public String toString() {
-		return super.toString() + " " + dimensioni + " " + smart;
-
+		String toString = super.toString() + " " + dimensioni;
+		if(smart) {
+			toString += "la tv è smart";
+		}else {
+			toString += "la tv non è smart";
+		}
+		return toString;
 	}
 	
 }
