@@ -15,4 +15,33 @@ public class Televisore extends Prodotto{
 	
 	
 	
+	public int getDimensioni() {
+		return dimensioni;
+	}
+
+
+
+	public void setDimensioni(int dimensioni) {
+		this.dimensioni = dimensioni;
+	}
+
+
+
+	public boolean isSmart() {
+		return smart;
+	}
+
+
+
+	public void setSmart(boolean smart) {
+		this.smart = smart;
+	}
+
+
+
+	public String toString() {
+		return super.toString() + " " + dimensioni + " " + smart;
+
+	}
+	
 }

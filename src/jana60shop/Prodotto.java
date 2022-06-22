@@ -3,7 +3,7 @@ package jana60shop;
 import java.text.DecimalFormat;
 
 public class Prodotto {
-	DecimalFormat df = new DecimalFormat();
+	DecimalFormat df = new DecimalFormat("#.00€");
 	
 /*Creare la classe Prodotto che gestisce i prodotti dello shop. Un prodotto è caratterizzato da:
 - codice (numero intero)
@@ -23,6 +23,8 @@ metodi di “utilità” per fare in modo che:
 	private double prezzo;
 	private int iva;
 	
+	double prezzoFinale;
+	
 	//costruttore
 	public Prodotto(int codice, String nome, String marca, double prezzo, int iva) {
 		super();
@@ -31,6 +33,7 @@ metodi di “utilità” per fare in modo che:
 		this.marca = marca;
 		this.prezzo = prezzo;
 		this.iva = iva;
+		
 	}
 	
 	//getter e setter
@@ -72,10 +75,13 @@ metodi di “utilità” per fare in modo che:
 	
 	//metodo iva
 	public double calcoloPrezzoIva(double prezzo, int iva) {
-		double prezzoFinale = prezzo * iva % 100;
-		System.out.println("Il prezzo del prodotto scelto è: " + df.format(prezzoFinale));
+		double prezzoFinale = prezzo -(prezzo * iva % 100);
+		System.out.println("Il prezzo del prodotto: " + df.format(prezzoFinale));
 	return prezzoFinale;
 		
+	}
+	public String toString() {
+		return codice + " " + nome + " " + marca + " " + prezzoFinale;
 	}
 	
 	
