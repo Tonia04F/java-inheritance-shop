@@ -11,7 +11,7 @@ vari sotto tipi di prodotto e testate le funzionalità delle vostre classi in un
 
 */
 
-		Smartphone samsung = new Smartphone(123, "a12", "samsung", 140.5, 21, 12344566, 128);
+		Smartphone samsung = new Smartphone(123, "a12", "samsung", 140.5, 21, 123876, 128);
 		System.out.println("Il prodotto acquistato è: " + samsung.toString());
 		System.out.println("vuoi cambiare prodotto?");
 		samsung.setImei(12345678);
@@ -28,6 +28,7 @@ vari sotto tipi di prodotto e testate le funzionalità delle vostre classi in un
 		
 		Cuffie sony = new Cuffie(789,"ch17", "sony", 150.7, 21, "verde", true);
 		System.out.println("Il prodotto acquistato è: " + sony.toString());
+		
 		
 	}
 

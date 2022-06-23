@@ -33,7 +33,6 @@ metodi di “utilità” per fare in modo che:
 		this.marca = marca;
 		this.prezzo = prezzo;
 		this.iva = iva;
-		
 	}
 	
 	//getter e setter
@@ -75,12 +74,17 @@ metodi di “utilità” per fare in modo che:
 	
 	//metodo iva
 	public double calcoloPrezzoIva() {
-		double prezzoFinale = prezzo -(prezzo * iva % 100);
-	return prezzoFinale;
+		return prezzo + prezzo* iva;
+	
 		
 	}
+	
+	public String getPrezzoFormattato() {
+		DecimalFormat df = new DecimalFormat("0.00€"); 
+		return df.format(calcoloPrezzoIva());
+	}
 	public String toString() {
-		return codice + " " + nome + " " + marca + " " + calcoloPrezzoIva();
+		return codice + " " + nome + " " + marca + " " + getPrezzoFormattato();
 	}
 	
 	

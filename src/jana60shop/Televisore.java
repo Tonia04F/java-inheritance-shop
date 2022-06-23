@@ -37,17 +37,18 @@ public class Televisore extends Prodotto{
 	public void setSmart(boolean smart) {
 		this.smart = smart;
 	}
-
+	private String isSmartString() {
+		if(smart) {
+			return "smart tv";
+		}else {
+			return "no smart";
+}
+	}
 
 
 	public String toString() {
-		String toString = super.toString() + " " + dimensioni;
-		if(smart) {
-			toString += "la tv è smart";
-		}else {
-			toString += "la tv non è smart";
-		}
-		return toString;
+		return super.toString() + " " + dimensioni + " " + isSmartString();
+		
 	}
 	
 }

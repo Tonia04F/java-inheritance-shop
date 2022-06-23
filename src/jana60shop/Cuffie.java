@@ -37,16 +37,17 @@ public class Cuffie extends Prodotto{
 	public void setWireless(boolean wireless) {
 		this.wireless = wireless;
 	}
-
+//creometodo per controllare se le cuffie sono wireless
+	public String isWirelessOrCable() {
+		if(wireless) {
+			return "le cuffie sono wireless";
+		}else {
+			return "le cuffie on sono wireless sono cablate";
+		}
+	}
 
 
 	public String toString() {
-		String toString = super.toString() + " " + colore;
-		if(wireless) {
-			toString += " le cuffie sono wireless";
-		}else {
-			toString += " le cuffie non sono wireless";
-		}
-		return toString;
+		return super.toString() + " " + colore + " " + isWirelessOrCable();
 	}
 }
